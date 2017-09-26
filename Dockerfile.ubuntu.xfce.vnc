@@ -49,6 +49,10 @@ RUN $INST_SCRIPTS/no_vnc.sh
 RUN $INST_SCRIPTS/firefox.sh
 RUN $INST_SCRIPTS/chrome.sh
 
+### Install Darktable && Picard
+RUN $INST_SCRIPTS/musicbrainzpicard.sh
+RUN $INST_SCRIPTS/darktable.sh
+
 ### Install xfce UI
 RUN $INST_SCRIPTS/xfce_ui.sh
 ADD ./src/common/xfce/ $HOME/
