@@ -59,5 +59,11 @@ RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 
 USER 1984
 
+USER 0
+RUN yum install -y darktable \
+    && yum clean all
+## switch back to default user
+USER 1984
+
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
 CMD ["--tail-log"]
