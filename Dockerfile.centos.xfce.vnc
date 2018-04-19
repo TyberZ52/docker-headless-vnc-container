@@ -60,7 +60,7 @@ RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 USER 1984
 
 USER 0
-RUN yum install -y epel-release cmake gcc-c++ intltool gtk3-devel libxml2-devel lensfun-devel librsvg2-devel sqlite-devel libcurl-devel libjpeg-turbo-devel libtiff-devel lcms2-devel json-glib-devel exiv2-devel pugixml-devel libsoup-devel libgphoto2-devel OpenEXR-devel libwebp-devel flickcurl-devel openjpeg-devel libsecret-devel GraphicsMagick-devel osm-gps-map-devel colord-devel colord-gtk-devel cups-devel SDL-devel darktable \
+RUN yum install -y epel-release cmake gcc-c++ intltool gtk3-devel libxml2-devel libsqlite3 libjpeg libpng libpugixml rawspeed gtk+-3 cairo lcms2 exiv2 tiff gphoto2 dbus-glib fop openexr libsoup2.4 lensfun-devel librsvg2-devel sqlite-devel libcurl-devel libjpeg-turbo-devel libtiff-devel lcms2-devel json-glib-devel exiv2-devel pugixml-devel libsoup-devel libgphoto2-devel OpenEXR-devel libwebp-devel flickcurl-devel openjpeg-devel libsecret-devel GraphicsMagick-devel osm-gps-map-devel colord-devel colord-gtk-devel cups-devel SDL-devel darktable \
     && yum clean all
 ## switch back to default user
 USER 1984
